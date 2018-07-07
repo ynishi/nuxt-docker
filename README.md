@@ -26,5 +26,5 @@ RUN yarn
 ```
 cd ${appdir}
 docker build -t ${imagename} .
-docker run --rm -it -p ${port}:3000 ${imagename}
+docker run --rm -it -p ${port}:3000 -e "HOST=0.0.0.0" ${imagename}
 ```
